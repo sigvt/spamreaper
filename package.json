@@ -1,0 +1,47 @@
+{
+  "name": "spamreaper",
+  "description": "PoC of BWT-RLE based sentence complexity score. Specifically made for handling multiple chats in live streams.",
+  "version": "0.0.0",
+  "author": "Yasuaki Uechi <y@uechi.io> (https://uechi.io/)",
+  "scripts": {
+    "build": "run-p tsup:*",
+    "clean": "shx rm -rf lib",
+    "dev": "yarn tsup:cjs --watch",
+    "prepublishOnly": "npm run clean && npm run build",
+    "test": "jest",
+    "tsup:cjs": "tsup src/index.ts -d lib/cjs --format cjs --dts --minify",
+    "tsup:esm": "tsup src/index.ts -d lib/esm --format esm --minify"
+  },
+  "types": "lib/cjs/index.d.ts",
+  "module": "lib/esm/index.js",
+  "main": "lib/cjs/index.js",
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.0.1",
+    "jest": "^27.0.6",
+    "npm-run-all": "^4.1.5",
+    "shx": "^0.3.3",
+    "ts-jest": "^27.0.3",
+    "tsup": "^4.12.5",
+    "typescript": "^4.3.5"
+  },
+  "homepage": "https://github.com/holodata/spamreaper",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/holodata/spamreaper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/holodata/spamreaper/issues"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "antispam",
+    "spam"
+  ],
+  "engines": {
+    "node": ">= 12.18.3"
+  }
+}

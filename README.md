@@ -1,6 +1,6 @@
 # 💀 Spamreaper
 
-PoC of BWT-RLE based sentence complexity score. Specifically made for handling multiple chats in live streams.
+PoC of BWT based sentence complexity score. Specifically made for handling multiple chats in live streams.
 
 Spamreaper will be included in [Komet](https://github.com/holodata/komet) as one of the filter engines.
 

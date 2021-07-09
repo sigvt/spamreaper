@@ -32,9 +32,9 @@ function rle(input: string) {
 // the bigger the number, the more likely it is to be spam.
 // judging it around 0.5 will give you a reasonably good result.
 export function sentenceComplexityScore(input: string) {
-  const bwt2 = bwt(bwt(input));
-  const rleStr = rle(bwt2);
-  const score = rleStr.length / 2;
+  const twoPathBwt = bwt(bwt(input));
+  const cmpBwt = rle(twoPathBwt);
+  const score = cmpBwt.length / 2;
   return -1 * Math.log(score / input.length);
 }
 

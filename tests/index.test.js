@@ -1,4 +1,4 @@
-import { isSpam } from "..";
+const { isSpam } = require("..");
 
 it("spam", async () => {
   const safe1 = [

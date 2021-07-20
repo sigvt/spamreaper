@@ -1,7 +1,7 @@
 {
   "name": "spamreaper",
   "description": "PoC of BWT-RLE based sentence complexity score. Specifically made for handling multiple chats in live streams.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Yasuaki Uechi <y@uechi.io> (https://uechi.io/)",
   "scripts": {
     "build": "run-p 'tsup:* --dts --minify'",

@@ -19,8 +19,10 @@
     "Cargo.toml",
     "index.js"
   ],
+  "dependencies": {
+    "cargo-cp-artifact": "^0.1"
+  },
   "devDependencies": {
-    "cargo-cp-artifact": "^0.1",
     "husky": "^7.0.1",
     "jest": "^27.0.6",
     "prettier": "^2.3.2",

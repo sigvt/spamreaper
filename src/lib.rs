@@ -44,6 +44,9 @@ fn rle(input: &String) -> String {
 fn spam_score(mut cx: FunctionContext) -> JsResult<JsNumber> {
     let input = cx.argument::<JsString>(0)?.value(&mut cx);
     let len = input.chars().count();
+    if len == 0 {
+        return Ok(cx.number(0));
+    }
     let two_path_bwt = bwt(&bwt(&input));
     let cmp_bwt = rle(&two_path_bwt);
     let score = cmp_bwt.chars().count() as f64 / 2.0;

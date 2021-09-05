@@ -20,11 +20,11 @@
     "index.js"
   ],
   "dependencies": {
-    "cargo-cp-artifact": "^0.1"
+    "cargo-cp-artifact": "^0.1.5"
   },
   "devDependencies": {
-    "husky": "^7.0.1",
-    "jest": "^27.0.6",
+    "husky": "^7.0.2",
+    "jest": "^27.1.0",
     "prettier": "^2.3.2",
     "pretty-quick": "^3.1.1"
   },

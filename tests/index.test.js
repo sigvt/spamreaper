@@ -1,4 +1,4 @@
-import { isSpam } from "..";
+const { spamScore, isSpam } = require("..");
 
 it("spam", async () => {
   const safe1 = [
@@ -51,4 +51,8 @@ it("spam", async () => {
   expect(isSpam(spam1)).toBe(true);
   expect(isSpam(spam2)).toBe(true);
   expect(isSpam(spam3)).toBe(true);
+
+  expect(spamScore("")).toBe(0);
+  expect(spamScore(" ")).toBe(1);
+  expect(spamScore("😞")).toBe(1);
 });

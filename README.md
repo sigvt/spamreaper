@@ -1,10 +1,12 @@
 # 💀 Spamreaper
 
-PoC of BWT based sentence complexity score. Specifically made for handling multiple chats in live streams.
+PoC of BWT based spam score function. Specifically made for handling a string of chats in live streams.
 
-Spamreaper will be included in [Komet](https://github.com/holodata/komet) as one of the filter engines.
+Spamreaper is included in [Komet](https://github.com/holodata/komet) as one of the filter engines.
 
 ## Use
+
+You'll need Rust to build a native module.
 
 ```bash
 npm install spamreaper
@@ -44,4 +46,5 @@ isSpam(spam); // => true
 
 ## Roadmap
 
+- [x] Rewritten in Rust
 - [ ] Test with a more diverse set of examples.

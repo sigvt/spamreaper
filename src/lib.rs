@@ -1,6 +1,6 @@
 use neon::prelude::*;
 
-fn suffix_table(input: &String) -> Vec<u32> {
+fn suffix_table(input: &str) -> Vec<u32> {
     let mut ca: Vec<(char, usize)> = input
         .chars()
         .into_iter()
@@ -11,7 +11,7 @@ fn suffix_table(input: &String) -> Vec<u32> {
     ca.iter().map(|&(_, i)| i as u32).collect()
 }
 
-fn bwt(input: &String) -> String {
+fn bwt(input: &str) -> String {
     let st = suffix_table(input);
     let len = input.chars().count();
     st.iter()
@@ -26,7 +26,7 @@ fn bwt(input: &String) -> String {
         .collect()
 }
 
-fn rle(input: &String) -> String {
+fn rle(input: &str) -> String {
     let mut res = String::new();
     let mut prev = input.chars().nth(0).unwrap();
     for c in input.chars() {
